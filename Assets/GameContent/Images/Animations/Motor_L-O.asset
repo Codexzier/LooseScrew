@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Motor_L-O
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 6439720410562846738, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: -3248854452843157561, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: 35811223298321352, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: -2200706063189688628, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: 5316451280242286416, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: -9008534178883772714, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: -7533265511682219223, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  - {fileID: 6868321375751497641, guid: dd14e1a595f90404794b70a4e605937a, type: 3}
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0
