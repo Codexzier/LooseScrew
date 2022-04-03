@@ -92,7 +92,7 @@ public class Mechanic : MonoBehaviour
         
         var step = roundToPixelGrid(Time.deltaTime);
         var oldPosition = this.transform.position;
-        this.transform.position += this.change * step * this.speed; // * this.speedByScreenSize
+        this.transform.position += this.change * step * this.speed * this.speedByScreenSize;
         if (this.isColliding())
         {
             //Debug.Log($"collide: {DateTime.Now}, Count: {this._countColliders}, Change: {this.change}, old:{oldPosition}, new: {this.transform.position}");

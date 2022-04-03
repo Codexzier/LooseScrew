@@ -5,9 +5,11 @@ using System.Linq;
 public class MachineRoomController : MonoBehaviour
 {
     public RunningMachine[] RunningMachines;
-    private System.Random _random = new System.Random(DateTime.Now.Second);
+    private readonly System.Random _random = new System.Random(DateTime.Now.Second);
 
-    private int maxDamage = 1;
+    private const int maxDamage = 1;
+
+    public bool allEngineAreDamage;
 
     private readonly Replacement[] Replacements = 
     {
@@ -19,21 +21,22 @@ public class MachineRoomController : MonoBehaviour
     
     void Update()
     {
-        if (this.RunningMachines.Count(c => c.replacementState != Replacement.None) >= this.maxDamage) return;
+        this.allEngineAreDamage = this.RunningMachines.All(a => a.isDamage);
+        
+        if (this.RunningMachines.Count(c => !c.isDamage && c.replacementState != Replacement.None) >= maxDamage) return;
 
         var r = this._random.Next(0, 10);
-        //Debug.Log($"one can will be damage: {r}");
-
-        if (r < 7) return;
+        if (r < 8) return;
         
-        //Debug.Log("one can will be damage will expected");
-
         var index = this._random.Next(0, this.RunningMachines.Length);
         if (this.RunningMachines[index].replacementState != Replacement.None) return;
         
-        //Debug.Log($"one going to damage: {index}");
-        
         var damageState = this._random.Next(0, this.Replacements.Length);
         this.RunningMachines[index].StartDamageReport(this.Replacements[damageState]);
+    }
+
+    public int GetPoints()
+    {
+        return this.RunningMachines.Sum(s => s.pointsForRepair);
     }
 }

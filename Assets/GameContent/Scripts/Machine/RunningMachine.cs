@@ -8,13 +8,19 @@ public class RunningMachine : MonoBehaviour
     public ReplacementItem plate;
 
     public RepairPlace RepairPlace;
-
     public ProgressBar damageState;
     
     public float status;
     public float coolDown;
 
+    public int pointsForRepair;
+    public bool isDamage;
+
     public Replacement replacementState { get; set; }
+
+    public float coolDownMin = 3f;
+    public float stepTime = 0.003f;
+    
     private void Start()
     {
         foreach (var replacementItem in this.Items)
@@ -29,7 +35,9 @@ public class RunningMachine : MonoBehaviour
 
     void Update()
     {
-        var step = Time.deltaTime * 0.1f;
+        if(this.isDamage) return;
+        
+        var step = Time.deltaTime * this.stepTime;
         this.coolDown += step;
         
         if (this.replacementState == Replacement.None) return;
@@ -41,18 +49,11 @@ public class RunningMachine : MonoBehaviour
             this.HasRepaired();
         }
         
-        if (step + this.status > 1f)
+        this.status += step;
+        if (this.status > 1f)
         {
             this.replacementState = Replacement.None;
-            
-            // TODO: game over
-            Debug.Log("Game Over");
-            //this.Items[(int)this.replacementState ].Hide();
-            this.HasRepaired();
-        }
-        else
-        {
-            this.status += step;
+            this.isDamage = true;
         }
 
         this.damageState.SetValue(this.status);
@@ -60,9 +61,8 @@ public class RunningMachine : MonoBehaviour
 
     public void StartDamageReport(Replacement replacement)
     {
-        if (this.coolDown < 0.5f)
+        if (this.coolDown < this.coolDownMin)
         {
-            //Debug.Log($"cool down {this.coolDown}");
             return;
         }
         
@@ -85,12 +85,16 @@ public class RunningMachine : MonoBehaviour
         this.status = 0f;
     }
 
-    public void HasRepaired()
+    private void HasRepaired()
     {
         if (!this.RepairPlace.HasRepaired)
         {
             return;
         }
+
+        var pointsForShortSteps = (int)((0.5f - this.stepTime) * 100);
+        var pointsForFastRepaired = (int)((1f - this.status) * 100);
+        this.pointsForRepair += pointsForFastRepaired + pointsForShortSteps;
 
         this.RepairPlace.HasRepaired = false;
         this.RepairPlace.MustRepair = false;
@@ -108,5 +112,8 @@ public class RunningMachine : MonoBehaviour
         this.coolDown = 0f;
         
         this.damageState.Hide();
+        
+        if (this.coolDownMin < 0.3f) return;
+        this.coolDownMin -= 0.1f;
     }
 }
