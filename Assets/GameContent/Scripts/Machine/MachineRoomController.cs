@@ -9,6 +9,8 @@ public class MachineRoomController : MonoBehaviour
 
     private const int maxDamage = 1;
 
+    private bool _firstDamage = true;
+
     public bool allEngineAreDamage;
 
     private readonly Replacement[] Replacements = 
@@ -32,7 +34,8 @@ public class MachineRoomController : MonoBehaviour
         if (this.RunningMachines[index].replacementState != Replacement.None) return;
         
         var damageState = this._random.Next(0, this.Replacements.Length);
-        this.RunningMachines[index].StartDamageReport(this.Replacements[damageState]);
+        this.RunningMachines[index].StartDamageReport(this.Replacements[damageState], this._firstDamage);
+        this._firstDamage = false;
     }
 
     public int GetPoints()

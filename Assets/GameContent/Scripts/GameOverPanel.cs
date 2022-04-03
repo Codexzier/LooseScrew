@@ -1,6 +1,7 @@
-using System;
+
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverPanel : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class GameOverPanel : MonoBehaviour
     public void SetText(int points)
     {
         this.tmpPoints.text = $"Points: {points}";
+    }
+
+    public void OnReturnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

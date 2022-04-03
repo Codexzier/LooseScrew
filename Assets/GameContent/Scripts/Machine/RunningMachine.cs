@@ -59,9 +59,9 @@ public class RunningMachine : MonoBehaviour
         this.damageState.SetValue(this.status);
     }
 
-    public void StartDamageReport(Replacement replacement)
+    public void StartDamageReport(Replacement replacement, bool forceToDamage = false)
     {
-        if (this.coolDown < this.coolDownMin)
+        if (this.coolDown < this.coolDownMin && !forceToDamage)
         {
             return;
         }
