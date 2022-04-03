@@ -7,10 +7,10 @@ public class MechanicInputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale < 1f)
-        {
-            return;
-        }
+        // if (Time.timeScale < 1f)
+        // {
+        //     return;
+        // }
         
         if ( Input.GetKey(KeyCode.D))this.Mechanic.change.x = 1;
         else if (Input.GetKey(KeyCode.A))   this.Mechanic.change.x = -1;

@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Mechanic : MonoBehaviour
 {
-    public Vector3 change = new Vector3();
+    public Vector3 change;
     public float speed = 1f;
     public float speedByScreenSize { get; set; } = 1f;
     private static readonly float pixelFrac = 1f / 16f;
-    protected Animator anim;
+    private Animator anim;
 
     public ReplacementItem[] ReplacementItems;
     public Replacement carriesSparePart = Replacement.None;
@@ -75,11 +75,12 @@ public class Mechanic : MonoBehaviour
             }
         }
     }
-
-
-    //private Vector3 oldPosition;
+    
     private void LateUpdate()
     {
+        if(this.change == null)
+            return;
+        
         this.anim.SetFloat("change_x", this.change.x);
         this.anim.SetFloat("change_y", this.change.y);
         
@@ -89,9 +90,9 @@ public class Mechanic : MonoBehaviour
         else if(this.change.x >= 1f) this.anim.SetFloat("lookAt", 3f);
         
         
-        var step = this.roundToPixelGrid(Time.deltaTime);
+        var step = roundToPixelGrid(Time.deltaTime);
         var oldPosition = this.transform.position;
-        this.transform.position += this.change * step * this.speedByScreenSize * this.speed;
+        this.transform.position += this.change * step * this.speed; // * this.speedByScreenSize
         if (this.isColliding())
         {
             //Debug.Log($"collide: {DateTime.Now}, Count: {this._countColliders}, Change: {this.change}, old:{oldPosition}, new: {this.transform.position}");
@@ -128,7 +129,7 @@ public class Mechanic : MonoBehaviour
         return this._countColliders > 0;
     }
 
-    private float roundToPixelGrid(float f)
+    private static float roundToPixelGrid(float f)
     {
         return Mathf.Ceil(f / pixelFrac) * pixelFrac;
     }
