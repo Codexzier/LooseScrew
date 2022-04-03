@@ -8,32 +8,71 @@ public class Mechanic : MonoBehaviour
     public float speedByScreenSize { get; set; } = 1f;
     private static readonly float pixelFrac = 1f / 16f;
     protected Animator anim;
+
+    public ReplacementItem[] ReplacementItems;
+    public Replacement carriesSparePart = Replacement.None;
+
+    private ContactFilter2D _triggerContactFilter2D; 
+    
     private void Update()
     {
-        if (Time.timeScale < 1f)
+        var found = this._boxCollider2D.OverlapCollider(this._triggerContactFilter2D, this._collider2Ds);
+        for (var i = 0; i < found; i++)
         {
-            return;
+            Debug.Log($"Sammel objekt: {i}");
+            
+            var foundCollider = this._collider2Ds[i];
+            if (!foundCollider.isTrigger)
+            {
+                continue;
+            }
+
+            Debug.Log("Sammel objekt gefunden");
+                
+            foreach (var collectible in foundCollider.GetComponents<CollectibleObject>())
+            {
+                switch (collectible)
+                {
+                    case CollectibleItem collectibleItem:
+                        this.carriesSparePart = collectibleItem.OnCollect();
+                        this.ShowReplacementIcon();
+                        break;
+                    case RepairPlace repairPlace:
+                    {
+                        if (repairPlace.OnRepair(this.carriesSparePart))
+                        {
+                            this.carriesSparePart = Replacement.None;
+                            this.HideReplacementIcons();
+                        }
+                        
+                        break;
+                    }
+                }
+            }
         }
-        
-        if ( Input.GetKey(KeyCode.D))
+
+    }
+
+    private void HideReplacementIcons()
+    {
+        foreach (var replacementItem in this.ReplacementItems)
         {
-            this.change.x = 1;
+            replacementItem.Hide();
         }
-        else if (Input.GetKey(KeyCode.A)) 
+    }
+
+    private void ShowReplacementIcon()
+    {
+        foreach (var replacementItem in this.ReplacementItems)
         {
-            this.change.x = -1;
-        }
-        else if (Input.GetKey(KeyCode.W)) 
-        {
-            this.change.y = 1;
-        }
-        else if (Input.GetKey(KeyCode.S)) 
-        {
-            this.change.y = -1;
-        }
-        else if (Input.GetKeyUp(KeyCode.E)) 
-        {
-            // Interact
+            if (replacementItem.Replacement == this.carriesSparePart)
+            {
+                replacementItem.Show();
+            }
+            else
+            {
+                replacementItem.Hide();
+            }
         }
     }
 
@@ -68,6 +107,14 @@ public class Mechanic : MonoBehaviour
         this._collider2Ds = new Collider2D[10];
         this._obstacleFilter = new ContactFilter2D();
         this.anim = this.GetComponent<Animator>();
+
+        foreach (var replacementItem in this.ReplacementItems)
+        {
+            replacementItem.Hide();
+        }
+
+        this._triggerContactFilter2D = new ContactFilter2D();
+        this._triggerContactFilter2D.useTriggers = true;
     }
 
     private BoxCollider2D _boxCollider2D;

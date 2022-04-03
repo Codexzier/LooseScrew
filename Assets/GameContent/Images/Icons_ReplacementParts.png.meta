@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: -7369290950598220929
     second: Icons_ReplacementParts_3
+  - first:
+      213: -8008257967536865253
+    second: Icons_ReplacementParts_4
+  - first:
+      213: 4082716900179590020
+    second: Icons_ReplacementParts_5
+  - first:
+      213: -6936178566344840602
+    second: Icons_ReplacementParts_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -160,8 +169,8 @@ TextureImporter:
       name: Icons_ReplacementParts_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 16
+        y: 8
         width: 8
         height: 8
       alignment: 0
@@ -181,8 +190,8 @@ TextureImporter:
       name: Icons_ReplacementParts_3
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
+        x: 24
+        y: 8
         width: 8
         height: 8
       alignment: 0
@@ -194,6 +203,69 @@ TextureImporter:
       bones: []
       spriteID: f73a713bce40bb990800000000000000
       internalID: -7369290950598220929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_ReplacementParts_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10064fdec3fcd090800000000000000
+      internalID: -8008257967536865253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_ReplacementParts_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b30b9b369b8a830800000000000000
+      internalID: 4082716900179590020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_ReplacementParts_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a6656e75ebdbf90800000000000000
+      internalID: -6936178566344840602
       vertices: []
       indices: 
       edges: []

@@ -47,11 +47,14 @@ TagManager:
   - name: Ground
     uniqueID: 1872707723
     locked: 0
-  - name: Maschine-front
-    uniqueID: 3921652609
-    locked: 0
   - name: Maschine-back
     uniqueID: 1185104421
+    locked: 0
+  - name: Objects
+    uniqueID: 4039012583
+    locked: 0
+  - name: Maschine-front
+    uniqueID: 3921652609
     locked: 0
   - name: Helpers
     uniqueID: 521885211
