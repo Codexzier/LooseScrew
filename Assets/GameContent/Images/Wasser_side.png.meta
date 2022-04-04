@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 122b98b77be3b024399ab3ccc28face3
+guid: d3a25e3655e5a8747a2eece53b82211f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2824973702957071135
-    second: Icons_ReplacementParts_0
+      213: -1738054415927787134
+    second: Wasser_side_0
   - first:
-      213: 8950005726809898479
-    second: Icons_ReplacementParts_1
+      213: -3213740629381338034
+    second: Wasser_side_1
   - first:
-      213: 7444672991379293804
-    second: Icons_ReplacementParts_2
+      213: 7261288194011657472
+    second: Wasser_side_2
   - first:
-      213: -7369290950598220929
-    second: Icons_ReplacementParts_3
+      213: 4735965072981163048
+    second: Wasser_side_3
   - first:
-      213: -8008257967536865253
-    second: Icons_ReplacementParts_4
+      213: -7306693245523878921
+    second: Wasser_side_4
   - first:
-      213: 4082716900179590020
-    second: Icons_ReplacementParts_5
-  - first:
-      213: -6936178566344840602
-    second: Icons_ReplacementParts_6
-  - first:
-      213: -3588926945634620065
-    second: Icons_ReplacementParts_7
+      213: 9111332282609249981
+    second: Wasser_side_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -59,9 +53,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -127,97 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icons_ReplacementParts_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e48c6f626dabc8d0800000000000000
-      internalID: -2824973702957071135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_ReplacementParts_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fed37341acec43c70800000000000000
-      internalID: 8950005726809898479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_ReplacementParts_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c668b1064aac05760800000000000000
-      internalID: 7444672991379293804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_ReplacementParts_3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f73a713bce40bb990800000000000000
-      internalID: -7369290950598220929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_ReplacementParts_4
+      name: Wasser_side_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,41 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b10064fdec3fcd090800000000000000
-      internalID: -8008257967536865253
+      spriteID: 2814352a7b031e7e0800000000000000
+      internalID: -1738054415927787134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_ReplacementParts_5
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48b30b9b369b8a830800000000000000
-      internalID: 4082716900179590020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_ReplacementParts_6
+      name: Wasser_side_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66a6656e75ebdbf90800000000000000
-      internalID: -6936178566344840602
+      spriteID: e4c2c79bcef7663d0800000000000000
+      internalID: -3213740629381338034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_ReplacementParts_7
+      name: Wasser_side_2
       rect:
         serializedVersion: 2
-        x: 24
+        x: 32
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,8 +177,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5dee9835f1913ec0800000000000000
-      internalID: -3588926945634620065
+      spriteID: 0057dc7f32745c460800000000000000
+      internalID: 7261288194011657472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasser_side_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cf2b3442789b140800000000000000
+      internalID: 4735965072981163048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasser_side_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb9dc9a439699a90800000000000000
+      internalID: -7306693245523878921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasser_side_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe2977ef64f17e70800000000000000
+      internalID: 9111332282609249981
       vertices: []
       indices: 
       edges: []

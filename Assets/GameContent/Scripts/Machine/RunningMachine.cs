@@ -6,6 +6,7 @@ public class RunningMachine : MonoBehaviour
     public ReplacementItem[] Items;
     public ReplacementItem steam;
     public ReplacementItem plate;
+    public ReplacementItem damage;
 
     public RepairPlace RepairPlace;
     public ProgressBar damageState;
@@ -16,10 +17,12 @@ public class RunningMachine : MonoBehaviour
     public int pointsForRepair;
     public bool isDamage;
 
+    private float _damageMultiplicator = 1.6f;
+    
     public Replacement replacementState { get; set; }
 
     public float coolDownMin = 3f;
-    public float stepTime = 0.003f;
+    public float stepTime = 0.03f;
     
     private void Start()
     {
@@ -31,6 +34,7 @@ public class RunningMachine : MonoBehaviour
         this.steam.Hide();
         this.plate.Hide();
         this.damageState.Hide();
+        this.damage.Hide();
     }
 
     void Update()
@@ -49,11 +53,17 @@ public class RunningMachine : MonoBehaviour
             this.HasRepaired();
         }
         
-        this.status += step;
-        if (this.status > 1f)
+        this.status += step * this._damageMultiplicator;
+        if (this.status >= 1f)
         {
             this.replacementState = Replacement.None;
             this.isDamage = true;
+            foreach (var replacementItem in this.Items)
+            {
+                replacementItem.Hide();
+            }
+            this.damageState.Hide();
+            this.damage.Show();
         }
 
         this.damageState.SetValue(this.status);
@@ -61,6 +71,7 @@ public class RunningMachine : MonoBehaviour
 
     public void StartDamageReport(Replacement replacement, bool forceToDamage = false)
     {
+        Debug.Log($"{this.coolDown}");
         if (this.coolDown < this.coolDownMin && !forceToDamage)
         {
             return;
@@ -110,10 +121,11 @@ public class RunningMachine : MonoBehaviour
         this.steam.Hide();
 
         this.coolDown = 0f;
-        
+        this._damageMultiplicator += .1f;
         this.damageState.Hide();
         
-        if (this.coolDownMin < 0.3f) return;
+        
+        if (this.coolDownMin < 0.11f) return;
         this.coolDownMin -= 0.1f;
     }
 }

@@ -9,12 +9,14 @@ public class CameraMotionController : MonoBehaviour
 
     private void Update()
     {
-#if DEBUG
-        this.mechanic.speedByScreenSize = 160f / this.camera.pixelHeight;
-#endif
+//#if DEBUG
+        var bySize = this.camera.orthographicSize / 3f;
+        this.mechanic.speedByScreenSize = 160f / this.camera.pixelHeight * bySize;
         
-        Vector3 mechanic = this.mechanic.transform.position;
-        mechanic.z = transform.position.z;
-        transform.position = mechanic;
+//#endif
+        
+        var mechanicPos = this.mechanic.transform.position;
+        mechanicPos.z = this.transform.position.z;
+        this.transform.position = mechanicPos;
     }
 }

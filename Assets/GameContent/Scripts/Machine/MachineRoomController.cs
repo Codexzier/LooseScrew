@@ -20,15 +20,23 @@ public class MachineRoomController : MonoBehaviour
         Replacement.Mutter, 
         Replacement.Oil
     };
-    
+
+    private void Start()
+    {
+        foreach (var runningMachine in this.RunningMachines)
+        {
+            runningMachine.coolDown = (float)this._random.NextDouble();
+        }
+    }
+
     void Update()
     {
         this.allEngineAreDamage = this.RunningMachines.All(a => a.isDamage);
         
         if (this.RunningMachines.Count(c => !c.isDamage && c.replacementState != Replacement.None) >= maxDamage) return;
 
-        var r = this._random.Next(0, 10);
-        if (r < 8) return;
+        var r = this._random.Next(0, 100);
+        if (r < 80) return;
         
         var index = this._random.Next(0, this.RunningMachines.Length);
         if (this.RunningMachines[index].replacementState != Replacement.None) return;

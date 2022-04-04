@@ -4,5 +4,6 @@ public enum Replacement
     Pipe = 1,
     Screw = 2,
     Mutter = 3,
-    Oil = 4
+    Oil = 4,
+    Damage = 5
 }
