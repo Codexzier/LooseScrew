@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -352,6 +353,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Dampf_5: -3977028464234164691
+      Dampf_0: -7067505488352532353
+      Dampf_6: -2301650738708805563
+      Dampf_9: 4817381579710161545
+      Dampf_8: -8344311636811368652
+      Dampf_7: -2734303172818097741
+      Dampf_4: -584634836433269179
+      Dampf_1: -238885935504557261
+      Dampf_2: -1139889015043246012
+      Dampf_3: 2104106819522953331
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

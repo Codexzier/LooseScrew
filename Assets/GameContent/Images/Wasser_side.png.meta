@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Wasser_side_4: -7306693245523878921
+      Wasser_side_2: 7261288194011657472
+      Wasser_side_1: -3213740629381338034
+      Wasser_side_0: -1738054415927787134
+      Wasser_side_5: 9111332282609249981
+      Wasser_side_3: 4735965072981163048
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

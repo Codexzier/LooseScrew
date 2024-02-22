@@ -120,6 +120,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1024,6 +1025,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Motor_02_7: 8550983088767738475
+      Motor_02_17: -2617852657344686605
+      Motor_02_21: -7318819629486483354
+      Motor_02_20: -8395279343405831412
+      Motor_02_18: -2394642463305812167
+      Motor_02_27: 5132076508210944904
+      Motor_02_30: 7197393871606088278
+      Motor_02_3: -2000357175447334999
+      Motor_02_1: 2389505251806906439
+      Motor_02_15: -4171296029934686686
+      Motor_02_12: -7533265511682219223
+      Motor_02_6: -2200706063189688628
+      Motor_02_10: -9008534178883772714
+      Motor_02_4: 35811223298321352
+      Motor_02_5: -8183689643527606859
+      Motor_02_19: 792041626401929475
+      Motor_02_26: -4669265222274080598
+      Motor_02_28: 6273358123729260201
+      Motor_02_0: 6439720410562846738
+      Motor_02_25: -1477997634972137717
+      Motor_02_16: 7644815521073384983
+      Motor_02_29: 4396934024049186021
+      Motor_02_8: 5316451280242286416
+      Motor_02_23: 2342812737368593162
+      Motor_02_14: 6868321375751497641
+      Motor_02_22: -90148121834124539
+      Motor_02_9: 27618458482550950
+      Motor_02_24: 2888210471994710796
+      Motor_02_11: 8424134377422427113
+      Motor_02_31: 7064447361046338641
+      Motor_02_13: -1340086315167343062
+      Motor_02_2: -3248854452843157561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

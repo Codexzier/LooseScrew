@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -280,6 +281,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Mechanic_1: 234506128942489151
+      Mechanic_2: -3320277611777720690
+      Mechanic_3: 8900618965382115629
+      Mechanic_0: -5527972174669230038
+      Mechanic_5: 1091499860427299931
+      Mechanic_6: 8173564417486565508
+      Mechanic_4: 2430875944146907098
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
